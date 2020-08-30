@@ -1,0 +1,212 @@
+CSS Notes
+
+"general rule of CSS"
+selector {
+	property: value;
+	anotherProperty: value;
+}
+
+examples
+/* Make all H1s purple and 56pc*/
+h1 {
+	color: purple;
+	font-size: 56px;
+}
+/* Give all img's a 3px red boarder*/
+img {
+	border-color: red;
+	border-width: 3px;
+}
+
+
+
+
+
+
+43. Our First Stylesheet
+/*	Three ways do to it, first two are BAD*/
+
+/* Inline */
+<h3 style="color:pink;"> text text text </h3>
+
+/* Style Tag */
+<html>
+<head>
+	<title>About Me</title>
+	<style type="text/css">
+		li {
+			color: red;
+		}
+	</style>
+</head>
+
+/* Seperate CSS file! BEST PRACTICE*/
+<html>
+<head>
+	<title>About Me</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+		}
+	</style>
+</head>
+
+
+
+
+
+
+45. CSS Colors
+-sample of simple CSS colors - colours.neilorangepeel.com
+
+1. Hexadecimal #000000
+	- RGB, light mixing rules
+		-First two digits are red, then green, then blue!
+		h1{
+			color: #000000;
+		}
+
+2. RGB
+	- scale of one to 255, light mixing rules
+		h2{
+			color: rgb(0,255,0);
+		}
+
+3. RGBA (alpha)
+	- same as RGB, but with 4th argument, range 0-1, of transparency
+		h3{
+			color: rgba(11,99,150,.6);
+		}
+
+
+46. Background and Border
+body{
+	background: blue; /* any style of color */
+	background: url(link);/* use for image as background */
+	background-repeat: no-repeat; /* control how the BG is tiled */
+	background-size: cover; /* Control size of BG */
+}
+h1{
+	border-color: purple;
+	border-width: 5px; /* default width is 0 */
+	border-style: solid; /* default style is nothing */
+
+	border: 8px dashed rgb(255,0,0); /* this combines the above three lines
+	 */
+}
+
+
+
+
+
+
+48. Selectors Basic Todo List - Element, ID, and Class selectors
+	- See example "TodoList.html" + "todos.css"
+	- custom ID, like id="special"
+		-reference in css as #special{}
+		-IDs can only be used once per page
+		-You can add as many IDs as you want
+	- custom class, like class="special"
+		-reference in css as .special{}
+
+
+
+
+
+
+49. Introduction to Chrome Inspector
+	- right click, inspect element
+	- you can see, in the styles tab to the right, what CSS is affecting each element
+		- you can even check or uncheck them in chrome!
+	- useful for looking at your own code, or other codes!
+
+
+
+
+
+50. More Advanced Selectors
+
+/* Star - selects everything on the page*/
+* {
+	border: 1px solid lightgrey;
+}
+/* Descendant - everything inside of a (the first element)*/
+li a{ /* This will affect all anchor tags inside of a list element */
+	color: red;
+}
+/* Adjacent - all adjecent (directly after) to a (the first element) */
+h4 + ul{
+	border: 4px solid red; /* Any unordered list directly after an h4 */
+}
+/* Attribute - selects all with a specific attribute */
+a[href="http://www.google.com"]{
+	background: blue;
+}
+input[type="checkbox"]{
+	background: red;
+}
+/* nth of type  - selects every nth div or element, etc.*/
+ul:nth-of-type(3){ /* this will turn all "third" ul purple */
+	background: purple;
+}
+li:nth-of-type(even){}
+
+
+
+52. Specificity and the Cascade
+	- Inheritence
+		- If you make the body { color: red; }, everything in the body is read
+		- If you make ul {color:red;}, all li will be red
+	- Specificity
+		- The more specific you are will take control
+			- body { color:red; }, ul {color:blue;}
+				-ul is more specific, li will be blue
+		-Specificity calculator: specificity.keegan.st
+		-Point system
+			/*-Inline style = 1000 */
+			/*-IDs = 100 */
+				#hello{}
+			/* Class, attribute, pseuto-class selectors = 10 */
+				.hello{}
+				input[type=:"text"]{}
+			/* Type selectors: Elements & Pseudo-elements = 1 */
+				li{}, li a{}, li + a{}
+
+
+INTERMEDIATE CSS
+
+57. Text and Fonts 
+
+(Check the FONTS folder in home/documents/Udemy Programming/CSS)
+	/*font-family*/
+	/*font-size*/
+	/*font-weight*/
+	/*line-height*/
+	/*text-align*/
+	/*text-decoration*/
+
+	- <span>blah blah blah</span> (in HTML) is a way to choose a block to have a unique modifier
+
+
+60. Using Google Fonts
+
+	fonts.google.com
+
+
+61. Introduction to the Box Model
+
+	every html element has a box around it
+	Properties include
+		- Content (innermost)
+		- Padding
+		- Border
+		- Margin (outermost)
+
+	check "Box Model" folder for example
+
+	You can use % instead of pixel for width and height values, % of ancestor
+
+62. Tic Tac Toe Board
+	-See folder
+64-67. Photo Grid 1
+	-See folder (Introduces Float)
+68-71.
+	

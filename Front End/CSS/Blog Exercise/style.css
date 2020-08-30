@@ -1,0 +1,47 @@
+/*border color: #bdc3c7
+date color: #3498db
+h2 color: #2c3e50
+
+font: source sans pro
+thin line is an hr (horizontal rule)
+*/
+body{
+	margin: 30px 20% 30px 20%;
+	border: 20px solid #bdc3c7;
+	max-width: 700px;
+	padding: 3%
+
+}
+
+*{
+	font-family:Source Sans Pro;
+}
+
+.date{
+	color:#3498db;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	/*rem is root em, not relative to an ancestor, but to the root element. Basically this means 20% of the font size for spacing.*/
+}
+
+h2{
+	color: #2c3e50;
+}
+
+
+p {
+	font-size: 12px;
+}
+
+.first {
+	border-left: 5px solid #bdc3c7;
+	padding-left: 5px;
+}
+
+hr {
+
+}
+
+.post {
+	margin-bottom: 2px;
+}

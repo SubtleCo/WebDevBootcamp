@@ -1,0 +1,42 @@
+p {
+
+
+/*Content - Width and Height*/
+
+width: 50%;
+/*remember, % is % of parent, in this case, body*/
+
+
+
+
+
+/*Border*/
+
+border: 2px solid blue;
+
+
+
+
+
+/*Padding*/
+
+/*padding: 10px;*/
+padding-left: 40px;
+
+
+
+
+
+/*Margin*/
+/*margin:100px;*/
+
+margin: 20px 40px 500px 100px;
+/*this method goes top, right, bottom, left*/
+
+/*margin auto centers an element for you*/
+margin: 0 auto 0 auto;
+/*again, this is top, right, bottom, left*/
+
+margin: 0 auto;
+/*this is a shorter way, 0 is top and bottom, auto is L and R*/
+}
