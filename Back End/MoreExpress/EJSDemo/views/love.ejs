@@ -1,0 +1,15 @@
+<%- include("partials/header")%>
+
+<h1>
+	You fell in love with: <%=thingVar.toUpperCase()%>
+</h1>
+
+<% if (thingVar.toLowerCase() === "rusty"){ %>
+	<p>Good Choice</p>
+<% } %>
+
+<p>
+	P.S. This is the EJS file!
+</p>
+
+<%- include("partials/footer")%>
